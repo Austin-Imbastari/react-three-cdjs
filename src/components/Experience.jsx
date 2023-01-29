@@ -23,7 +23,7 @@ function Experience() {
               transform
               wrapperClass="htmlScreen"
               distanceFactor={1.25}>
-              <a href="https://soundcloud.com/imbastaribrothers/whatyouwant">
+              <a target="_blank" href="https://soundcloud.com/imbastaribrothers/whatyouwant">
                 <img src={img} alt="img1" />
               </a>
             </Html>
