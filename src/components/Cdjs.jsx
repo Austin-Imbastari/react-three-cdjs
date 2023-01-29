@@ -48,7 +48,7 @@ export default function Model(props) {
         geometry={nodes.mesh1281425499_8.geometry}
         material={materials.mat15}>
         {playingSong1 ? (
-          <Html occlude={[dj]} wrapperClass="label" position={[0.65, 0.2, 0.1]}>
+          <Html occlude={[dj]} wrapperClass="label" position={[0.65, 0.25, 0.1]}>
             Timeless
           </Html>
         ) : (
