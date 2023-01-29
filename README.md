@@ -13,7 +13,7 @@ React Three Fiber Dj controller that plays music that I produced with abelton li
 - CSS3
 
 ## Live Demo
-- https://timely-pothos-d24a74.netlify.app
+
 
 ## Preview
 
