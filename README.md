@@ -19,9 +19,10 @@ https://startling-conkies-a396c1.netlify.app
 
 
 ## Features
-- User can move around the object
+- User can move around the dj controller
 - User can click specific spots :)
 - User can press play to play music that I produced
+- User can press pause to stop the music
 
 ## Development
 
@@ -31,7 +32,7 @@ https://startling-conkies-a396c1.netlify.app
 
     ```shell
     git clone https://github.com/Austin-Imbastari/react-three-cdjs.git
-    cd react-three-cdjs
+    cd react-three-dj
     ```
 
 
