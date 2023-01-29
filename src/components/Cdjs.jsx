@@ -1,13 +1,28 @@
-import React, { useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useGLTF } from '@react-three/drei'
 
 import timeless from '../Audio/timeless.mp3'
+import whatYouWant from '../Audio/whatYouWant.mp3'
 
 export default function Model(props) {
+  const [playingSong1, setPlayingSong1] = useState(false)
+  const [timelessAudio] = useState(new Audio(timeless))
+
+  const [playingSong2, setPlayingSong2] = useState(false)
+  const [whatYouWantAudio] = useState(new Audio(whatYouWant))
+
   const handleClickLeft = () => {
-    const timelessAudio = new Audio(timeless)
-    console.log('left button clicked')
+    setPlayingSong1(!playingSong1)
   }
+
+  const handleClickRight = () => {
+    setPlayingSong2(!playingSong2)
+  }
+
+  useEffect(() => {
+    playingSong1 ? timelessAudio.play() : timelessAudio.pause()
+    playingSong2 ? whatYouWantAudio.play() : whatYouWantAudio.pause()
+  }, [playingSong1, playingSong2])
 
   const { nodes, materials } = useGLTF('./cdjs.glb')
   return (
@@ -22,7 +37,15 @@ export default function Model(props) {
       <mesh castShadow receiveShadow geometry={nodes.mesh1281425499_7.geometry} material={materials.mat10} />
 
       {/* left play button */}
-      <mesh onClick={handleClickLeft} castShadow receiveShadow geometry={nodes.mesh1281425499_8.geometry} material={materials.mat15} />
+      <mesh
+        onClick={handleClickLeft}
+        onPointerEnter={() => (document.body.style.cursor = 'pointer')}
+        onPointerLeave={() => (document.body.style.cursor = 'default')}
+        castShadow
+        receiveShadow
+        geometry={nodes.mesh1281425499_8.geometry}
+        material={materials.mat15}
+      />
 
       <mesh castShadow receiveShadow geometry={nodes.mesh1281425499_9.geometry} material={materials.mat13} />
 
@@ -38,7 +61,9 @@ export default function Model(props) {
 
       {/* right play button */}
       <mesh
-        onClick={() => console.log('right play')}
+        onClick={handleClickRight}
+        onPointerEnter={() => (document.body.style.cursor = 'pointer')}
+        onPointerLeave={() => (document.body.style.cursor = 'default')}
         castShadow
         receiveShadow
         geometry={nodes.mesh933813175_5.geometry}
