@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
-import { useGLTF, Html, Float, PresentationControls, ContactShadows } from '@react-three/drei'
+import { Html, Float, PresentationControls, ContactShadows } from '@react-three/drei'
 
 import img from '../what.png'
 import img2 from '../time.png'
 
 import Cdjs from './Cdjs'
+import Text from './Text'
 
 function Experience() {
   const dj = useRef()
@@ -39,6 +40,9 @@ function Experience() {
                 <img src={img2} alt="img2" />
               </a>
             </Html>
+          </group>
+          <group position={[0, 0.4, -0.6]}>
+            <Text />
           </group>
         </Float>
       </PresentationControls>
