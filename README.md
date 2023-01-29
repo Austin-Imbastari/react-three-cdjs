@@ -13,7 +13,7 @@ React Three Fiber Dj controller that plays music that I produced with abelton li
 - CSS3
 
 ## Live Demo
-
+https://startling-conkies-a396c1.netlify.app
 
 ## Preview
 
